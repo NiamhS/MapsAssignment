@@ -7,12 +7,12 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 
 var mappingDataArray = mappingData.rows
 
-for ( i=0; i<mappingDataArray.length; i++) {
-	
+for ( i = 0; i < mappingDataArray.length; i++) {
+
 	var locationObject = mappingDataArray[i];
-	
+
 	// Took code for adding a market from Leaflet; changed coordinates to my address in NY
 	var marker = L.marker([locationObject.Latitude, locationObject.Longitude]).addTo(map);
 
-	marker.bindPopup("<b>"+locationObject.NameofCenter+"</b><br>"+locationObject.FullAddress+"");
+	marker.bindPopup("<b>" + locationObject.NameofCenter + "</b><br>" + locationObject.FullAddress + "");
 }
