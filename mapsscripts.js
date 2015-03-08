@@ -7,3 +7,5 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 
 // Took code for adding a market from Leaflet; changed coordinates to my address in NY
 var marker = L.marker([40.814383,-73.959234]).addTo(map);
+
+marker.bindPopup("<b>Niamh's Apartment!</b><br>A popup to have a popup.").openPopup();
